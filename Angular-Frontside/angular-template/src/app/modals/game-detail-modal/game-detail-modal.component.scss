@@ -1,0 +1,58 @@
+.modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85); // Dark overlay for better focus on modal
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050; // Ensures modal is on top
+  }
+  
+  .modal-content {
+    background: #222; // Dark grey for modal background
+    color: #ccc; // Light grey text for contrast
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px; // Limiting width for better readability
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5); // Soft shadow for 3D effect
+    transition: transform 0.3s ease-out; // Smooth transition for opening and closing
+  
+    h2 {
+      color: #fff; // White color for headings
+      font-size: 24px; // Slightly larger font for emphasis
+      margin-bottom: 20px;
+    }
+  
+    img {
+      width: 100%; // Responsive image width
+      height: auto;
+      margin-bottom: 20px; // Space between the image and the text
+      border-radius: 5px; // Smooth rounded corners for images
+    }
+  
+    p {
+      font-size: 16px; // Readable font size
+      line-height: 1.5; // Adequate line spacing for text
+      text-align: justify; // Justified text for cleaner presentation
+      margin-bottom: 30px; // Spacing before close button
+    }
+  
+    button {
+      font-size: 18px; // Larger font size for buttons
+      padding: 10px 20px; // Adequate padding for clickability
+      border: none;
+      border-radius: 5px;
+      background-color: #2979ff; // Bright blue for contrast and visibility
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out; // Smooth background color transition
+  
+      &:hover {
+        background-color: darken(#2979ff, 10%); // Darker on hover for interaction feedback
+      }
+    }
+  }
+  

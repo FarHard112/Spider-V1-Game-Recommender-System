@@ -1,0 +1,71 @@
+:host {
+  width: 33%;
+}
+
+.game-card {
+  display: flex;
+  align-items: center;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 80%;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .game-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .game-details {
+    padding: 20px;
+
+    h3 {
+      margin: 0 0 10px 0;
+      color: #66c0f4;
+    }
+
+    p {
+      margin: 0; // Ensures that the paragraph does not push the boundaries of the container
+      &:hover {
+        cursor: pointer;
+        color: white;
+      }
+    }
+  }
+
+  .button-container{
+    display: flex;
+    
+    .play-button {
+      background-color: #4CAF50; // Green background for visibility
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      width: 100%;
+  
+      &:hover {
+        background-color: darken(#4CAF50, 10%);
+      }
+    }
+  }
+  
+}
+
+.collapsed {
+  max-height: 4.5em; // This is critical for showing less content
+  overflow: hidden;
+}

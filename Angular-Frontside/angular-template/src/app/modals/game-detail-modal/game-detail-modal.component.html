@@ -1,0 +1,9 @@
+<div class="modal-background" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <h2>{{ game.name }}</h2>
+      <img [src]="game.imgUrl" [alt]="game.name">
+      <p>{{ game.game_description }}</p>
+      <button (click)="closeModal()">Close</button>
+    </div>
+  </div>
+  

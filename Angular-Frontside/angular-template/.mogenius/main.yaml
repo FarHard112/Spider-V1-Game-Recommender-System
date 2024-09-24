@@ -1,0 +1,19 @@
+serviceType: Deployment
+displayName: tempstar
+dockerfileName: Dockerfile
+dockerContext: .
+k8sSettings:
+  limitCpuCores: 0.7
+  limitMemoryMB: 200
+  ephemeralStorageMB: 50
+  replicaCount: 1
+  deploymentStrategy: recreate
+  imagePullPolicy: IfNotPresent
+  probesOn: false
+envVars: []
+ports:
+  - portType: HTTPS
+    internalPort: 8080
+    externalPort: 80
+    expose: true
+

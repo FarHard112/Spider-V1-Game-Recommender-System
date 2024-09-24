@@ -1,0 +1,8 @@
+@import './variables'; // Make sure the path is correct based on your project structure
+
+// You can add other global styles here
+body {
+  font-family: $base-font;
+  color: $text-color;
+  background-color: $bg-color;
+}

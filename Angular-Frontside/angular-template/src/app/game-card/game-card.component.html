@@ -1,0 +1,11 @@
+<div class="game-card" (click)="openModal()">
+  <img [src]="game.imgUrl" [alt]="game.name" class="game-image" onerror="this.src='assets/400.svg'; this.onerror=null;">
+  <div class="game-details">
+    <h3>{{ game.name }}</h3>
+    <p>{{ game.game_description | slice:0:50 }}{{ game.game_description.length > 50 ? '...' : '' }}</p>
+  <div class="button-container">
+    <button *ngIf="true" (click)="playGame(); $event.stopPropagation()" class="play-button">Play</button>
+  </div>
+  </div>
+</div>
+<app-game-detail-modal *ngIf="showModal" [game]="game" (close)="closeModal()"></app-game-detail-modal>
